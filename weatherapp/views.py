@@ -7,7 +7,6 @@ from datetime import datetime, date, timedelta
 
 # Create your views here.
 def getPrevData(prev_date):
-    print(prev_date)
     url = "https://www.timeanddate.com/weather/india/ulhasnagar/historic?hd={}".format(prev_date)
     res = requests.get(url)
     text = bs4.BeautifulSoup(res.text, "html.parser")
@@ -15,7 +14,7 @@ def getPrevData(prev_date):
     rows = text.select('#wt-his > tbody tr')
     dict = {}
     for i, row in enumerate(rows):
-        # print(row)
+        print(row)
         time = row.select('th')[0].text[:5]
         temp = int(row.select('td:nth-child(3)')[0].text[:2])
         if time[3:] == '30':
@@ -27,6 +26,7 @@ def getPrevData(prev_date):
 
 def getPrevTime():
     now = datetime.now()
+
     curr_time = now.strftime("%H:%M:%S")
     if curr_time[0] == '0':
         prev_time = curr_time[1:2] + ".00"
@@ -35,10 +35,12 @@ def getPrevTime():
     return str(prev_time)
 
 def getPrevDate():
+
     curr_date = date.today()
-    temp = str(curr_date)
-    curr_date = temp[:4] + temp[5:7] + temp[8:]
-    prev_date = int(curr_date) - 1
+
+    yesterday = curr_date - timedelta(days=1)
+    prev_date = yesterday.strftime("%Y%m%d")
+
     return str(prev_date)
 
 def getDay():
