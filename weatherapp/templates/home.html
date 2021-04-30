@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+	Weather-App
+{% endblock %} 
+{% block content %}
+
+
+<div class="main">
+	<div class="top">
+		<div class="location">
+			<i class="fas fa-map-marker-alt"></i>
+			Ulhasnagar, MH</div>
+	</div>
+	<div class="bottom">
+		{% for key, value in latest_data.items %}
+			<div class="current">
+				<div class="left-split">
+					<div class="temperature">{{ value.temperature }}&#176;</div>
+					<div class="day">{{ value.day }}
+						<div class="time">{{ value.time }}</div>
+					</div>			
+				</div>
+				<div class="right-split">
+					<div class="logo">
+						<i class= "{{ value.icon }}"></i>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="forecasted">
+			{% for key, value in prediction.items %}
+				<div class="forecasting">
+					<div class="temp-icon-group">
+						<div class="temperature">
+							{{ value.temperature }}&#176;
+						</div>
+						<div class="logo">
+							<i class= "{{ value.icon }}"></i>
+						</div>
+					</div>
+					<div class="day">{{ value.day }}
+						<div class="time">{{ value.time }}</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+{% endblock %}

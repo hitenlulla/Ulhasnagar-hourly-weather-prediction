@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="{% static 'stylesheet/style.css' %}" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<title>{% block title %}{% endblock %}</title>
+	</head>
+	<body>
+		<div class="nav">
+			<div class="nav-left">
+				{% if user.is_authenticated %}
+				<a href="{% url 'home' %}"><i class="fas fa-cloud-sun-rain"></i></a>
+				{% else %}
+				<a href="{% url 'ulogin' %}"><i class="fas fa-cloud-sun-rain"></i></a>
+				{% endif %}
+			</div>
+			<div class="nav-right">
+				{% if user.is_authenticated %}
+				<a href="{% url 'ulogout' %}">Logout</a>
+				{% else %}
+				<a href="{% url 'usignup' %}">Signup</a>
+				<a href="{% url 'ulogin' %}">Login</a>
+				{% endif %}
+			</div>
+		</div>
+		{% if user.is_authenticated %}
+			<div class="content">{% block content %} {% endblock %}</div>
+		{% else %}
+			<div class="body">{% block body %} {% endblock %}</div>
+		{% endif %}
+	</body>
+</html>

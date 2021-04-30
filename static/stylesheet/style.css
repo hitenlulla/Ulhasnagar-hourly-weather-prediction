@@ -1,0 +1,287 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	/* background: #000046;  */
+	/* background: -webkit-linear-gradient(to right, #1CB5E0, #000046);
+background: linear-gradient(to right, #1CB5E0, #000046); */
+	width: 100%;
+	background-size: 100% 100%;
+	background-position: 0;
+	background-repeat: no-repeat;
+	height: 100vh;
+	position: relative;
+	/* overflow-y: hidden; */
+}
+
+.body {
+	margin-top: -1rem;
+	height: 100%;
+	background-image: url(../images/landing.jpg);
+}
+
+.content{
+	margin-top: -1rem;
+	/* height: 100%; */
+	/* background-image: url(../images/mumbai-bg.jpg); */
+background: #C9D6FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	background-position: center;
+	background-size: 100% 100%;
+	background-position: 0;
+	background-repeat: no-repeat;
+}
+
+.nav {
+	background-color: #000;
+	color: #fff;
+	padding: 1.5rem;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	z-index: 100;
+}
+
+.nav i {
+	font-size: 3.5rem;
+}
+
+.nav-right {
+	margin-right: 15rem;
+}
+
+.nav-left {
+	margin-left: 15rem;
+}
+.nav a {
+	text-decoration: none;
+	font-size: 2rem;
+	color: inherit;
+	padding: 0 20px;
+}
+
+.nav a:last-of-type {
+	padding: 0 10px 0 20px;
+}
+
+h1 {
+	margin: 1rem 0;
+	font-size: 50px;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+	background-color: #000;
+	padding: 15px;
+	border-radius: 50px;
+	color: white;
+}
+
+.btn {
+	padding: 10px 25px;
+	background-color: #000;
+	color: #fff;
+	border-radius: 20px;
+	outline: none;
+}
+
+.container,
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	margin-top: auto;
+	height: 90vh;
+}
+form {
+	padding: 4rem 15rem;
+	box-shadow: 0 8px 32px 0 rgba(32, 33, 48, 0.37);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(15px);
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+}
+input {
+	margin-top: 1rem;
+	font-size: 2rem;
+	border-radius: 20px;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	font-weight: bold;
+	outline: none;
+}
+
+.main {
+	margin: 0rem auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	padding: 4rem 9rem;
+	max-width: 1400px;
+	border-radius: 20px;
+}
+
+.top {
+	background-image: url(../images/ulhasnagar-bg.jpeg);
+	width: 100%;
+	background-size: 100% 100%;
+	background-position: 0;
+	background-repeat: no-repeat;
+	height: 50vh;
+	overflow: hidden;
+	position: relative;
+	border-radius: 20px 20px 0 0;
+	box-shadow: 0 16px 32px 0 rgba(32, 33, 48, 0.37);
+}
+
+.top .location {
+	font-size: 4rem;
+	font-family: 'Montserrat';
+	font-weight: bold;
+	position: absolute;
+	padding:1rem;
+	left: 1.5rem;
+	top: 1.5rem;
+	color: #fff;
+	letter-spacing: 2px;
+	box-shadow: 0 16px 32px 0 rgba(32, 33, 48, 0.37);
+	border-radius: 20px;
+}
+
+.bottom {
+	padding: 3rem 0;
+	font-size: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 8px 32px 0 rgba(32, 33, 48, 0.37);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(15px);
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 0 0 20px 20px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.current {
+	margin-right: 4rem;
+	padding: 0 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-right: 1px solid #000;
+}
+
+.current .left-split{
+	margin-right: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.current .right-split .logo{
+	font-size: 9rem;
+}
+
+.current .day {
+	font-size: 2rem;
+	font-weight: normal;
+	padding: .3rem 2rem;
+	background-color: rgba(128, 128, 128, 0.65);
+	border-radius: 20px;
+	color:white;
+	text-align: center;
+	
+}
+
+.current .day .time{
+	font-size: 1.5rem;
+}
+
+.current .temperature {
+	display: flex;
+	font-size: 7rem;
+}
+
+.bottom .forecasted {
+	display: flex;
+	padding-right: 1rem;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	/* padding: 2rem; */
+}
+
+.forecasting {
+	font-size: 2.7rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 2rem;
+}
+
+.temp-icon-group{
+	/* display: flex; */
+
+}
+
+.forecasting .day{
+	font-size: 1.7rem;
+	padding: .3rem 1.5rem;
+	margin-bottom: .5rem;
+	background-color: rgba(128, 128, 128, 0.65);
+	border-radius: 20px;
+	color:white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo{
+	margin: .8rem 0;
+}
+
+.fa-sun{
+	color: rgb(233, 209, 101);
+	text-shadow:0px 2px 10px rgb(233, 209, 101);
+}
+
+.fa-cloud{
+	color: rgb(120, 200, 246);
+	text-shadow:0px 2px 10px rgb(120, 200, 246);
+}
+
+.fa-wind{
+	color: rgb(133, 133, 133);
+	text-shadow:0px 2px 10px rgb(133, 133, 133);
+}
+
+.fa-cloud-showers-heavy{
+	color: blue;
+	text-shadow:0px 2px 10px blue;
+}
+
+.fa-snowflake{
+	color: whitesmoke;
+	text-shadow:0px 2px 10px rgb(0, 0, 0)
+}
