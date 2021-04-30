@@ -1,5 +1,5 @@
 # Ulhasnagar-hourly-weather-prediction
- A website which gives hourly weather prediction using raingorest regression.
+ A website which gives hourly weather prediction using rainforest regression.
 
 Weather prediction machine learning model is available as google collab notebook with required csv data to train it
 
